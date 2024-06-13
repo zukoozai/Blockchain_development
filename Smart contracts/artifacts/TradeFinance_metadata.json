@@ -1,0 +1,208 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "agreementId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "importer",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "exporter",
+						"type": "address"
+					}
+				],
+				"name": "AgreementCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "agreementId",
+						"type": "uint256"
+					}
+				],
+				"name": "ShipmentMarked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "agreementId",
+						"type": "uint256"
+					}
+				],
+				"name": "TradeCompleted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "agreementCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "agreements",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "importer",
+						"type": "address"
+					},
+					{
+						"internalType": "address payable",
+						"name": "exporter",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "productDescription",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "releaseDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum TradeFinance.State",
+						"name": "state",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "exporter",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "productDescription",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deliveryDays",
+						"type": "uint256"
+					}
+				],
+				"name": "createAgreement",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "agreementId",
+						"type": "uint256"
+					}
+				],
+				"name": "markShipment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "agreementId",
+						"type": "uint256"
+					}
+				],
+				"name": "releasePayment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Smart contracts/SC6.sol": "TradeFinance"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Smart contracts/SC6.sol": {
+			"keccak256": "0x473bc6d9b80bec76eb3bc9ebae500264f0d9b59cb6beaa8c6eaeefb0a39dada9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3d5d163fd0b1c3ff4390da4e2fa7d8c57f4941a7780c7d509db4ced57ee4c54d",
+				"dweb:/ipfs/QmWx7pR1UBnicVStwRDFYU7zXxGzKa5yF9Tw7nZ1PJ4JDN"
+			]
+		}
+	},
+	"version": 1
+}
